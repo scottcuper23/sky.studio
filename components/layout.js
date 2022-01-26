@@ -2,11 +2,12 @@ import Head from 'next/head'
 import styles from './Layout.module.css'
 
 export default function Layout({children, title}) {
+    const baseUrl = "https://otomir23.me/";
     const meta = {
-        url: "https://otomir23.me/",
+        url: baseUrl,
         title: (title ? title + " | " : "") + "Damir Modyarov (@otomir23)",
         description: "Hi! I am Damir Modyarov - developer from Moscow, Russia. I mostly develop in JS, Java and C#. I am also learning Dart.",
-        image: this.url + "avatar.jpg"
+        image: baseUrl + "avatar.jpg"
     }
 
     return (
