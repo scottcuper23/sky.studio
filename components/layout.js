@@ -6,7 +6,7 @@ export default function Layout({children, title}) {
         url: "https://otomir23.me/",
         title: (title ? title + " | " : "") + "Damir Modyarov (@otomir23)",
         description: "Hi! I am Damir Modyarov - developer from Moscow, Russia. I mostly develop in JS, Java and C#. I am also learning Dart.",
-        image: "/avatar.jpg"
+        image: this.url + "/avatar.jpg"
     }
 
     return (
