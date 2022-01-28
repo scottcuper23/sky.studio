@@ -1,4 +1,4 @@
-#otomir23's personal website
+# otomir23's personal website
 aka [otomir23.me](https://otomir23.me)
 
 ## Modifying the code
