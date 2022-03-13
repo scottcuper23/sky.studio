@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css'
 import avatar from '../public/avatar.jpg'
 import Socials from "../components/socials";
 import Layout from "../components/layout";
+import Projects from "../components/projects";
 
 export default function Home() {
     return (
@@ -47,6 +48,33 @@ export default function Home() {
                     }
                 ]
             }/>
+
+            <Projects projects={[
+                {
+                    icon: "fas fa-user",
+                    title: "otomir23.me",
+                    description: "My personal website",
+                    url: "https://otomir23.me",
+                    lang: "JS",
+                    langColor: '#ffd500',
+                },
+                {
+                    icon: "fas fa-globe",
+                    title: "stormland.ru",
+                    description: "Website for private SMP",
+                    url: "https://stormland.ru",
+                    lang: "TS",
+                    langColor: '#267dff',
+                },
+                {
+                    icon: "fas fa-plug",
+                    title: "Connect",
+                    description: "Simple socket application written on Java",
+                    url: "https://github.com/otomir23/connect",
+                    lang: "Java",
+                    langColor: '#b76200',
+                }
+            ]}/>
         </Layout>
     )
 }
