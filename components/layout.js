@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import styles from './Layout.module.css'
+import useDarkMode from "use-dark-mode";
 
 export default function Layout({children, title}) {
+    const darkmode = useDarkMode(true)
+
     const baseUrl = "https://otomir23.me/";
     const meta = {
         url: baseUrl,
@@ -29,6 +32,8 @@ export default function Layout({children, title}) {
                 <meta property="twitter:description" content={meta.description}/>
                 <meta property="twitter:image" content={meta.image}/>
             </Head>
+
+            <div onClick={darkmode.toggle} className={styles.themeToggle}><i className={darkmode.value ? "fas fa-lightbulb" : "fas fa-moon"}/></div>
 
             <main className={styles.main}>
                 {children}
