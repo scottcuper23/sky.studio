@@ -34,6 +34,13 @@
 
 }
 
+.badges {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .5em;
+}
+
 .badge {
     border: 1px solid #ff3a7f;
     border-radius: 8px;

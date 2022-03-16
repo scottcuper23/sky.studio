@@ -1,9 +1,9 @@
 import styles from './Socials.module.css'
 
 export default function Socials({ socials }) {
-    let tags = []
-    for (let i in socials) {
-        let social = socials[i]
+    const tags = []
+    for (const i in socials) {
+        const social = socials[i]
         tags.push(
             (
                 <a href={social.link} className={styles.social} target="_blank" rel="noreferrer">

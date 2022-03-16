@@ -55,24 +55,36 @@ export default function Home() {
                     title: "otomir23.me",
                     description: "My personal website",
                     url: "https://otomir23.me",
-                    lang: "JS",
-                    langColor: '#ffd500',
+                    badges: [
+                        {
+                            text: "JS",
+                            color: '#ffd500',
+                        }
+                    ]
                 },
                 {
                     icon: "fas fa-globe",
                     title: "stormland.ru",
                     description: "Website for private SMP",
                     url: "https://stormland.ru",
-                    lang: "TS",
-                    langColor: '#267dff',
+                    badges: [
+                        {
+                            text: "TS",
+                            color: '#267dff',
+                        }
+                    ]
                 },
                 {
                     icon: "fas fa-plug",
                     title: "Connect",
                     description: "Simple socket application written on Java",
                     url: "https://github.com/otomir23/connect",
-                    lang: "Java",
-                    langColor: '#b76200',
+                    badges: [
+                        {
+                            text: "Java",
+                            color: '#b76200',
+                        }
+                    ]
                 }
             ]}/>
         </Layout>
