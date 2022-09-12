@@ -1,20 +1,26 @@
 import Head from 'next/head'
-import styles from './Layout.module.css'
 import useDarkMode from "use-dark-mode";
 
-export default function Layout({children, title}) {
-    const darkmode = useDarkMode(true)
+export type LayoutProps = {
+    title?: string;
+    children?: React.ReactNode;
+}
 
-    const baseUrl = "https://otomir23.me/";
+export default function Layout({children, title}: LayoutProps) {
+    const darkMode = useDarkMode(true, {
+        classNameDark: "dark",
+    })
+
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://example.com";
     const meta = {
         url: baseUrl,
-        title: (title ? title + " | " : "") + "Damir Modyarov (@otomir23)",
-        description: "Hi! I am Damir Modyarov - developer from Moscow, Russia. I mostly develop in JS, Java and C#. I am also learning Dart.",
-        image: baseUrl + "avatar.jpg"
+        title: (title ? title + " | " : "") + (process.env.NEXT_PUBLIC_META_TITLE || "Personal Website"),
+        description: process.env.NEXT_PUBLIC_META_DESCRIPTION || "Welcome to my personal website!",
+        image: baseUrl + "/avatar.jpg"
     }
 
     return (
-        <div className={styles.container}>
+        <div className="min-h-screen px-1 flex flex-col items-center justify-center bg-white dark:bg-black transition-colors">
             <Head>
                 <title>{meta.title}</title>
                 <meta name="description" content={meta.description}/>
@@ -33,9 +39,11 @@ export default function Layout({children, title}) {
                 <meta property="twitter:image" content={meta.image}/>
             </Head>
 
-            <div onClick={darkmode.toggle} className={styles.themeToggle}><i className={darkmode.value ? "fas fa-lightbulb" : "fas fa-moon"}/></div>
+            <div onClick={darkMode.toggle} className="fixed right-4 top-4 cursor-pointer text-gray-dark dark:text-gray-light hover:text-black dark:hover:text-white transition-colors">
+                <i className={darkMode.value ? "fas fa-lightbulb" : "fas fa-moon"}/>
+            </div>
 
-            <main className={styles.main}>
+            <main className={"flex-1 flex flex-col justify-center items-center"}>
                 {children}
             </main>
         </div>
