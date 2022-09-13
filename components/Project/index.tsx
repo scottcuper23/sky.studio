@@ -26,6 +26,7 @@ export default function Project({project, tags}: ProjectProps) {
                     {
                         project.tags.map(t => {
                             const tag = tags.find(tag => tag.id === t)
+                            if (!tag) return null
                             return (
                                 <div key={"bdg" + tag.id}
                                      className="border rounded-lg py-1 px-2 text-sm text-current"
@@ -35,7 +36,7 @@ export default function Project({project, tags}: ProjectProps) {
                                 >
                                     {tag.name}
                                 </div>)
-                        })
+                        }).filter(t => t !== null)
                     }
                 </div>
             </a>
