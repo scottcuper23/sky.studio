@@ -9,7 +9,7 @@ export default function Error404() {
                 Извините, страница не найдена
             </p>
             <Link href="/">
-                <a className="text-gray hover:text-gray-dark dark:hover:text-gray-light transition-colors">Мне все равно, <b title="country roads">отвези меня домой</b></a>
+                <a className="text-gray hover:text-gray-dark dark:hover:text-gray-light transition-colors">Мне все равно, <b title="country roads">вернуться домой</b></a>
             </Link>
         </Layout>
     )
