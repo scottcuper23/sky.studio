@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import useDarkMode from "use-dark-mode";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export type LayoutProps = {
     title?: string;
@@ -40,7 +41,7 @@ export default function Layout({children, title}: LayoutProps) {
             </Head>
 
             <div onClick={darkMode.toggle} className="fixed right-4 top-4 cursor-pointer text-gray-dark dark:text-gray-light hover:text-black dark:hover:text-white transition-colors">
-                <i className={darkMode.value ? "fas fa-lightbulb" : "fas fa-moon"}/>
+                <FontAwesomeIcon icon={["fas", darkMode.value ? "lightbulb" : "moon"]}/>
             </div>
 
             <main className={"flex-1 flex flex-col justify-center items-center"}>

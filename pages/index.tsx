@@ -54,7 +54,7 @@ export default function Home({title, description, projects, socials, projectTags
                 <section className="snap-start flex flex-col items-center justify-center min-h-screen py-16"
                          id="projects">
                     <h2 className="text-2xl font-bold text-black dark:text-white mb-8">Мои проекты</h2>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 max-w-xs md:max-w-2xl w-full">
                         <select
                             className="px-2 py-1 w-fit max-w-sm rounded-lg border mb-4
                                 border-gray-light dark:border-gray-dark text-gray-dark dark:text-gray-light bg-white dark:bg-black outline-none"
@@ -72,7 +72,7 @@ export default function Home({title, description, projects, socials, projectTags
                         <input
                             value={searchQuery} onChange={(e) => setSearchQuery(e.target.value.toLowerCase())}
                             placeholder="Поиск" type="text"
-                            className="px-2 py-1 w-full max-w-md rounded-lg border mb-4
+                            className="px-2 py-1 w-full rounded-lg border mb-4
                             placeholder:text-gray-light dark:placeholder:text-gray-dark
                             border-gray-light dark:border-gray-dark text-gray-dark dark:text-gray-light bg-white dark:bg-black outline-none"
                         />

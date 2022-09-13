@@ -1,10 +1,12 @@
+import {IconName} from "@fortawesome/free-brands-svg-icons";
+
 export type Social = {
-    icon: string;
+    icon: IconName;
     url: string;
 }
 
 export type Project = {
-    icon: string;
+    icon: IconName;
     title: string;
     description: string;
     url: string;
