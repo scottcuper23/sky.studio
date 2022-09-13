@@ -20,9 +20,9 @@ export default function Home({title, description, projects, socials, projectTags
     return (
         <Layout>
             <nav className="fixed left-4 top-4 flex text-sm text-gray font-bold uppercase gap-2">
-                <a href="#socials" className="hover:text-gray-dark dark:hover:text-gray-light">Socials</a>
-                <a href="#projects" className="hover:text-gray-dark dark:hover:text-gray-light">Projects</a>
-                <a href="#blog" className="hover:text-gray-dark dark:hover:text-gray-light">Blog</a>
+                <a href="#socials" className="hover:text-gray-dark dark:hover:text-gray-light">Социальные сети</a>
+                <a href="#projects" className="hover:text-gray-dark dark:hover:text-gray-light">Проекты</a>
+                <a href="#blog" className="hover:text-gray-dark dark:hover:text-gray-light">Блог</a>
             </nav>
             <div className="h-screen snap-y snap-mandatory overflow-y-scroll w-screen">
                 <section className="snap-start flex flex-col items-center justify-center min-h-screen py-16"
@@ -53,14 +53,14 @@ export default function Home({title, description, projects, socials, projectTags
 
                 <section className="snap-start flex flex-col items-center justify-center min-h-screen py-16"
                          id="projects">
-                    <h2 className="text-2xl font-bold text-black dark:text-white mb-8">My projects</h2>
+                    <h2 className="text-2xl font-bold text-black dark:text-white mb-8">Мои проекты</h2>
                     <div className="flex gap-2">
                         <select
                             className="px-2 py-1 w-fit max-w-sm rounded-lg border mb-4
                                 border-gray-light dark:border-gray-dark text-gray-dark dark:text-gray-light bg-white dark:bg-black outline-none"
                             value={tag} onChange={e => setTag(e.target.value.toLowerCase())}
                         >
-                            <option value="all">All</option>
+                            <option value="all">Все</option>
                             {
                                 projectTags
                                     .map(tag => tag.name)
@@ -71,7 +71,7 @@ export default function Home({title, description, projects, socials, projectTags
                         </select>
                         <input
                             value={searchQuery} onChange={(e) => setSearchQuery(e.target.value.toLowerCase())}
-                            placeholder="Search" type="text"
+                            placeholder="Поиск" type="text"
                             className="px-2 py-1 w-full max-w-md rounded-lg border mb-4
                             placeholder:text-gray-light dark:placeholder:text-gray-dark
                             border-gray-light dark:border-gray-dark text-gray-dark dark:text-gray-light bg-white dark:bg-black outline-none"
@@ -91,10 +91,10 @@ export default function Home({title, description, projects, socials, projectTags
                 </section>
 
                 <section className="snap-start flex flex-col items-center justify-center min-h-screen py-16" id="blog">
-                    <h2 className="text-2xl font-bold text-black dark:text-white mb-8">Blog</h2>
+                    <h2 className="text-2xl font-bold text-black dark:text-white mb-8">Блог</h2>
                     {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
                     <div className="text-gray">
-                        // I am currently working on this section
+                        // Данный раздел находится в разработке
                     </div>
                 </section>
             </div>
